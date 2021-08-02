@@ -1,0 +1,25 @@
+GET http://localhost:8181/v1/policies
+
+###
+POST http://localhost:8181/v1/data/permission
+Content-Type: application/json
+
+{
+    "input": {
+    "subject": {
+        "roles": [
+            "user"
+        ]
+    },
+    "action": "read",
+    "object": "order"
+}
+}
+
+### authorized
+POST http://localhost:3000/orders
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJyb2xlcyI6WyJhZG1pbiJdfQ.fw8otUsm0jn3G7dvWozix5p2QotN3AVyZNJAwY7n50E
+
+### unauthorized
+POST http://localhost:3000/orders
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJyb2xlcyI6WyJ1c2VyIl19.LW5pvc1TRaIk3FNaMADQmjx2Hy86weS64WtVdgK1oZk

@@ -1,0 +1,20 @@
+{
+    "role_permissions": {
+        "admin": [
+            {
+                "action": "create",
+                "object": "order"
+            },
+            {
+                "action": "read",
+                "object": "order"
+            }
+        ],
+        "user": [
+            {
+                "action": "read",
+                "object": "order"
+            }
+        ]
+    }
+}

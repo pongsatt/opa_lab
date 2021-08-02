@@ -1,0 +1,12 @@
+services:
+  demo:
+    url: http://opa-bundle-server
+
+bundles:
+  authz:
+    service: demo
+    resource: bundle.tar.gz
+    persist: true
+    polling:
+      min_delay_seconds: 10
+      max_delay_seconds: 20
