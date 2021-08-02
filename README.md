@@ -1,0 +1,1 @@
+This repo is part of a blog post series "[Authorization in microservices with Open Policy Agent, NodeJs, and ReactJs](https://pongzt.com/post/opa-intro/)"
