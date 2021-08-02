@@ -3,9 +3,13 @@ import './App.css';
 import useOpaWasm from './useOpaWasm';
 
 function App() {
+  // load wasm from the bundle server
   const { policy } = useOpaWasm("http://localhost:8182");
+
+  // store evaluation result
   const [info, setInfo] = useState({ text: '', color: '', input: {} });
 
+  // check permission against requested input
   const check = (role, action, object) => {
     const input = {
       subject: {
